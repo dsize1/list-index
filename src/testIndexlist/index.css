@@ -1,0 +1,31 @@
+.test-index-list {
+  margin: 20px 100px;
+}
+
+.test-index-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.test-index-item {
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.test-index-table {
+  margin-top: 20px;
+  height: 60px;
+  border: 1px solid #333;
+  overflow: auto;
+}
+
+.test-index-table li>div {
+  height: 20px;
+  background-color: #f006;
+}
+
+.test-index-table li>div:first-of-type {
+  background-color: #f0f0f0;
+}

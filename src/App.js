@@ -2,25 +2,39 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import IndexList from './indexlist'
+import TestIndexlist from './testIndexlist'
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      value: ''
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <input 
+          type='text' 
+          value={this.state.value}
+          onChange={this.handleChange}
+          onBlur={this.handleSubmit}
+          onSubmit={this.handleSubmit}
+        />
+        {/* <IndexList searchValue={this.state.value}/> */}
+        <TestIndexlist />
+      </div>
+    )
+  }
+
+  handleChange = (e) => {
+    e && e.preventDefault()
+    const value = e.target.value
+    this.setState({
+      value: value
+    })
+  }
 }
 
 export default App;
